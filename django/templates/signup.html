@@ -1,0 +1,18 @@
+{% include 'menu.html' %}
+SIGNUP
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <p><label>UserName :</label><input type="text" name="username"/></p>
+    <p><label>Password :</label><input type="password" name="password"/></p>
+<button type="submit" >Signup</button>
+</form>
+<p>
+    {% if user %}
+    new user created with username {{user.username}}
+    {% endif %}
+
+    {% if user %}
+    {{error_message}}
+       {% endif %}
+   
+</P>

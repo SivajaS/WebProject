@@ -1,0 +1,7 @@
+{% include 'menu.html' %}
+REGISTER
+<form method='post' enctype='multipart/form-data'>
+{% csrf_token %}
+{{frm.as_p}}
+<button type="submit" >register</button>
+</form>
